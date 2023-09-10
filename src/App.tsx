@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className={darkMode ? "dark":""}>
-      <div className="h-screen bg-gray-950 text-slate-100 ">
+      <div className="bg-slate-900 text-slate-50 w-full">
         <Navbar darkMode = {darkMode} setDarkMode = {setDarkMode} />
         <HomeLanding />
       </div>
