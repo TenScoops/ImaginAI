@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+.fade-edges {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgb(12, 35, 52) 40%,
+      rgb(12, 35, 52) 40%,
+      transparent
+    );
+}
+
+
+/* For WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 8px;  /* Width of the vertical scrollbar */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #0f0f0f;  /* Color of the scroll thumb */
+    border-radius: 2px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #232323;  /* Color of the scroll thumb on hover */
+  }
+  
+  /* For Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+  }
+  

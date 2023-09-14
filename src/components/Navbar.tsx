@@ -14,7 +14,7 @@ const Navbar:React.FC<NavProp> = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [currentHash, setCurrentHash] = useState<string>('');
 
-  // for position highlight navbar effect, Home will highlight if on home screen
+  // for position highlight navbar effect, Home will highlight blue if on home screen
   useEffect(() => {
     const handleScroll = () => {
       const homeElement = document.getElementById('home');
@@ -42,8 +42,8 @@ const Navbar:React.FC<NavProp> = () => {
   }, []);
 
   return (
-    <nav className="flex justify-between items-center py-2 fixed top-0 w-full z-50 bg-slate-800">
-      <h1 className="ml-5 text-lg">Imagin<span className="text-blue-400">AI</span></h1>
+    <nav className="flex justify-between items-center py-2 fixed top-0 w-full z-50 bg-slate-50">
+      <h1 className="ml-5 text-lg">Imagin<span className="text-blue-500">AI</span></h1>
 
       <button 
           className={`${isOpen?"hidden":"block"} mr-5 md:hidden`} 
@@ -77,28 +77,28 @@ const Navbar:React.FC<NavProp> = () => {
 
       {/* medium screens and above */}
       <ul className="cursor-pointer hidden md:flex">
-        <li className={`hover:text-blue-400 mr-8 ${currentHash === '#home' ? 'text-blue-400' : ''}`}>
+        <li className={`hover:text-blue-500 mr-8 ${currentHash === '#home' ? 'text-blue-500' : ''}`}>
           <a href="#home">
             Home
           </a>
         </li>
-        <li className={`hover:text-blue-400 mr-8 ${currentHash === '#learn-more' ? 'text-blue-400' : ''}`}>
+        <li className={`hover:text-blue-500 mr-8 ${currentHash === '#learn-more' ? 'text-blue-500' : ''}`}>
           <a href="#learn-more">
             Learn More
           </a>
         </li>
-        <li className="hover:text-blue-400 mr-8">Some text</li>
-        <li className="hover:text-blue-400 mr-8">Some text</li>
-        <li className="hover:text-blue-400 mr-8">Some text</li>
+        <li className="hover:text-blue-500 mr-8">Community</li>
+        <li className="hover:text-blue-500 mr-8">Prices</li>
+        <li className="hover:text-blue-500 mr-8">Contact</li>
       </ul>
-
-
-      <button className="hidden mr-5 bg-white text-black w-32 py-2 md:block ">
-        <span className="flex justify-center items-center text-md font-bold">
-          Log in <IoEnterOutline className="ml-3" size={25}/>
-        </span>
-      </button>
-      
+        {/* log in section */}
+      <div className="hidden md:flex justify-center items-center text-md font-medium hover:cursor-pointer">
+        <div className="w-[1.5px] h-[30px] mr-5 bg-slate-500"></div>
+        <span className="text-sm"> Log in </span>
+        <button className="rounded hidden ml-4 mr-5 bg-slate-900 text-white w-14 py-2 md:block hover:text-blue-400">
+            <IoEnterOutline className="ml-3" size={25}/>
+        </button>
+      </div>
     </nav>
   )
 }
