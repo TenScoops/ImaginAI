@@ -42,7 +42,7 @@ const Navbar:React.FC<NavProp> = () => {
   }, []);
 
   return (
-    <nav className="flex justify-between items-center py-2 fixed top-0 w-full z-50 bg-slate-50">
+    <nav className="flex justify-between items-center py-2 fixed top-0 w-full bg-slate-50">
       <h1 className="ml-5 text-lg">Imagin<span className="text-blue-500">AI</span></h1>
 
       <button 
@@ -55,7 +55,7 @@ const Navbar:React.FC<NavProp> = () => {
      
       
       {/* mobile screens */}
-      <div className={`${isOpen ? "block" : "hidden"} fixed inset-0 bg-gray-800 
+      <div className={`${isOpen ? "block" : "hidden"} fixed inset-0 bg-slate-50 
                     flex justify-center items-center md:hidden`}>
       <button
         className="absolute top-4 right-4"
@@ -66,10 +66,11 @@ const Navbar:React.FC<NavProp> = () => {
 
         <ul className="cursor-pointer text-lg flex flex-col items-center">
           {/* <li className="text-4xl">ImaginAI</li> */}
-          <li className="hover:underline ">Learn More</li>
-          <li className="hover:underline mt-8">Some text</li>
-          <li className="hover:underline mt-8">Some text</li>
-          <li className="hover:underline mt-8">Some text</li>
+          <li className="hover:underline ">Home</li>
+          <li className="hover:underline mt-8">Learn More</li>
+          <li className="hover:underline mt-8">Community</li>
+          <li className="hover:underline mt-8">Prices</li>
+          <li className="hover:underline mt-8">Contact</li>
           <li className="hover:underline mt-8 text-blue-400">Log in</li>
         </ul>
 

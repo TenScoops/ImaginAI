@@ -10,14 +10,15 @@ const HomeLanding = () => {
   {/* home section */}
     <div id="home" className="h-screen w-full flex flex-col items-center justify-center 
                     md:flex-row md:justify-center space-y-4 md:space-x-6 lg:space-x-16 ">
-      <div className="text-center flex flex-col lg:mr-[20px]">
-        <div className="mb-10">
-          <h1 className="text-7xl mb-8 ">
+                      
+      <div className="text-center flex flex-col mb-5 lg:mr-[20px]">
+        <div className=" md:mt-0">
+          <h1 className="text-5xl md:text-7xl md:mb-8 ">
               {/* Make It A Reality */}
               <h1 className="mb-4"><span className="text-blue-500 ">Imagin</span> it,</h1>
-              <h1 className="mb-12">make it a reality!</h1>
+              <h1 className="mb-7 md:mb-12">make it a reality!</h1>
           </h1>
-          <button className="w-1/3 py-4 mr-10 bg-slate-900 text-white font-normal rounded">Get started</button>
+          <button className="w-1/3 py-2.5 md:py-4 mr-4 md:mr-10 bg-slate-900 text-white font-normal rounded">Get started</button>
           {/* <p>Join millions of users who've used the power of ai to bring their own imaginations to life!</p> */}
           <button className="underline hover:no-underline">Join the community </button>
         </div>
