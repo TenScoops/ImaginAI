@@ -42,11 +42,11 @@ const Navbar:React.FC<NavProp> = () => {
   }, []);
 
   return (
-    <nav className="flex justify-between items-center py-2 fixed top-0 w-full bg-slate-50">
+    <nav className="flex justify-between md:border-b border-black items-center py-2 fixed top-0 w-full bg-slate-50">
       <h1 className="ml-5 text-lg">Imagin<span className="text-blue-500">AI</span></h1>
 
       <button 
-          className={`${isOpen?"hidden":"block"} mr-5 md:hidden`} 
+          className={`${isOpen?"hidden":"block"} mr-5 smd:hidden`} 
           onClick={() => setIsOpen(!isOpen)}
       >
         <RxHamburgerMenu size={25}/>
@@ -56,7 +56,7 @@ const Navbar:React.FC<NavProp> = () => {
       
       {/* mobile screens */}
       <div className={`${isOpen ? "block" : "hidden"} fixed inset-0 bg-slate-50 
-                    flex justify-center items-center md:hidden`}>
+                    flex justify-center items-center smd:hidden `}>
       <button
         className="absolute top-4 right-4"
         onClick={() => setIsOpen(!isOpen)}
@@ -77,7 +77,7 @@ const Navbar:React.FC<NavProp> = () => {
       </div>
 
       {/* medium screens and above */}
-      <ul className="cursor-pointer hidden md:flex">
+      <ul className="cursor-pointer hidden smd:flex">
         <li className={`hover:text-blue-500 mr-8 ${currentHash === '#home' ? 'text-blue-500' : ''}`}>
           <a href="#home">
             Home
@@ -93,10 +93,10 @@ const Navbar:React.FC<NavProp> = () => {
         <li className="hover:text-blue-500 mr-8">Contact</li>
       </ul>
         {/* log in section */}
-      <div className="hidden md:flex justify-center items-center text-md font-medium hover:cursor-pointer">
+      <div className="hidden smd:flex justify-center items-center text-md font-medium hover:cursor-pointer">
         <div className="w-[1.5px] h-[30px] mr-5 bg-slate-500"></div>
         <span className="text-sm"> Log in </span>
-        <button className="rounded hidden ml-4 mr-5 bg-slate-900 text-white w-14 py-2 md:block hover:text-blue-400">
+        <button className="rounded ml-4 mr-5 bg-slate-900 text-white w-14 py-2  hover:text-blue-400">
             <IoEnterOutline className="ml-3" size={25}/>
         </button>
       </div>

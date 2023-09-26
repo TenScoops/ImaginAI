@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar"
 import HomeLanding from "./components/HomeLanding"
+import LearnMore from "./components/LearnMore"
 import {useState} from "react"
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <div className="bg-slate-50 text-slate-900 w-full">
         <Navbar darkMode = {darkMode} setDarkMode = {setDarkMode} />
         <HomeLanding />
+        <LearnMore />
       </div>
     </div>
     )
